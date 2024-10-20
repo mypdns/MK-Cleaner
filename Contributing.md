@@ -1,0 +1,1 @@
+IF you know how to right Rust and pet Ferris, you know how to contribute.
