@@ -1,12 +1,17 @@
 [![My Privacy DNS](https://www.mypdns.org/images/logo.png)](https://www.mypdns.org/)
 
-## Sponsor
-
 [![ko-fi](https://www.mypdns.org/fileproxy/?name=sp_kofi_mypdns)]([DONATION.md](https://kb.mypdns.org/articles/MTX-A-3/DONATION))
 [![liberapay](https://www.mypdns.org/fileproxy/?name=sp_receives_mypdns)](https://liberapay.com/MyPDNS/donate)
 [![goal](https://www.mypdns.org/fileproxy/?name=sp_goal_mypdns)](https://liberapay.com/MyPDNS/donate)
 
 # MK Cleaner
+
+<!-- TOC -->
+* [MK Cleaner](#mk-cleaner)
+  * [The error](#the-error)
+  * [Other docs](#other-docs)
+  * [History](#history)
+<!-- TOC -->
 
 Mk Cleaner is a little program that can operate with the API of a [Misskey][MK]
 server. It should be able to do 3 things:
@@ -40,6 +45,8 @@ Failed to get user $UID notes: JSON error: invalid type: map, expected a sequenc
 users suspended: 1, not suspended: 0
 notes deleted: 0, not deleted: 1
 ```
+
+I've opened this issue https://github.com/coord-e/misskey-rs/issues/73
 
 ## Other docs
 
