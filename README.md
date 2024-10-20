@@ -43,8 +43,8 @@ notes deleted: 0, not deleted: 1
 
 ## Other docs
 
-* Contributing: <./Contributing.md>
-* Code of Conduct: [CODE_OF_CONDUCT.md][CODE_OF_CONDUCT.md]
+* Contributing: <a href="../Contributing.md">Contributing.md</a>
+* Code of Conduct: <a href="../CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>
 * License: <a href="../LICENSE" alt="BSD 3-Clause License" title="BSD 3-Clause License">BSD 3-Clause License</a>
 
 [DRS]: https://docs.rs/misskey/latest/misskey/
