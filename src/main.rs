@@ -3,6 +3,7 @@ use misskey::ClientExt;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
+
     let endpoint = std::env::var("MISSKEY_API_URL")
         .expect("environment variable MISSKEY_API_URL");
     let token = std::env::var("MISSKEY_TOKEN")
