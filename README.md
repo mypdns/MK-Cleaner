@@ -43,9 +43,9 @@ notes deleted: 0, not deleted: 1
 
 ## Other docs
 
-* Contributing: <a href="../blob/master/Contributing.md">Contributing.md</a>
-* Code of Conduct: <a href="../blob/master/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>
-* License: <a href="../blob/master/LICENSE" alt="BSD 3-Clause License" title="BSD 3-Clause License">BSD 3-Clause License</a>
+* Contributing: <a href="../master/Contributing.md">Contributing.md</a>
+* Code of Conduct: <a href="../master/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>
+* License: <a href="../master/LICENSE" alt="BSD 3-Clause License" title="BSD 3-Clause License">BSD 3-Clause License</a>
 
 [DRS]: https://docs.rs/misskey/latest/misskey/
 [MK]: https://github.com/misskey-dev/misskey
