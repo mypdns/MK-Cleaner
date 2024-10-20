@@ -43,9 +43,9 @@ notes deleted: 0, not deleted: 1
 
 ## Other docs
 
-* Contributing: <a href="https://github.com/secret-admin-programs/MK-Cleaner/blob/master/Contributing.md">Contributing.md</a>
-* Code of Conduct: <a href="https://github.com/secret-admin-programs/MK-Cleaner?tab=readme-ov-file#">CODE_OF_CONDUCT.md</a>
-* License: <a href="#?tab=BSD-3-Clause-1-ov-file" alt="BSD 3-Clause License" title="BSD 3-Clause License">BSD 3-Clause License</a>
+* Contributing: <a href="../blob/master/Contributing.md">Contributing.md</a>
+* Code of Conduct: <a href="../blob/master/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>
+* License: <a href="../blob/master/LICENSE" alt="BSD 3-Clause License" title="BSD 3-Clause License">BSD 3-Clause License</a>
 
 [DRS]: https://docs.rs/misskey/latest/misskey/
 [MK]: https://github.com/misskey-dev/misskey
