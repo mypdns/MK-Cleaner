@@ -48,8 +48,9 @@ https://github.com/mypdns/MK-Cleaner.git mk-ckleaner
 > We, should change the way we read in the environment variables from a config
 > file, and the rust program itself asks for the userID. 
 
-Next you need to configure the `mk-cleaner.sh` by copying the
-`mk-cleaner.sh.example` to `mk-cleaner.sh` and set the values of
+> [!IMPORTANT]
+> Next you need to configure the `mk-cleaner.sh` by copying the
+> `mk-cleaner.sh.example` to `mk-cleaner.sh` and set the values of
 
 1. MISSKEY_API_URL, This is the full url to your API path, such as `https://example.org/api/`
 2. MISSKEY_TOKEN, This is your private API_key from your installation URI, such as `https://example.org/settings/api`
