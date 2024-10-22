@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+read -erp "UserID to suspend: " userID
+
+export MISSKEY_API_URL=""
+export MISSKEY_TOKEN=""
+
+# In case the program do not work for your, please do uncomment the next
+# two lines and add the output to a new issue
+# export RUST_LOG=debug
+# export RUST_BACKTRACE=1
+./target/debug/mk-cleaner "$userID"

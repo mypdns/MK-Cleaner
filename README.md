@@ -8,6 +8,7 @@
 
 <!-- TOC -->
 * [MK Cleaner](#mk-cleaner)
+  * [Running MK Cleaner](#running-mk-cleaner)
   * [The error](#the-error)
   * [Other docs](#other-docs)
   * [History](#history)
@@ -33,6 +34,31 @@ this), was May 7, 2023
 This may be the reason to the error I receive when running the code against the
 server version `2024.10.0` while the last mention version on the project is
 `v12.63.0`
+
+## Running MK Cleaner
+First, you should clone this repository to make it easy to update.
+
+```shell
+https://github.com/mypdns/MK-Cleaner.git mk-ckleaner
+```
+
+> [!NOTE]  
+> This is subject to being altered once the program is fully
+> functional, and released as stable.
+> We, should change the way we read in the environment variables from a config
+> file, and the rust program itself asks for the userID. 
+
+Next you need to configure the `mk-cleaner.sh` by copying the
+`mk-cleaner.sh.example` to `mk-cleaner.sh` and set the values of
+
+1. MISSKEY_API_URL, This is the full url to your API path, such as `https://example.org/api/`
+2. MISSKEY_TOKEN, This is your private API_key from your installation URI, such as `https://example.org/settings/api`
+
+Now you should be able to run `mk-cleaner.sh` like 
+
+```shell
+mk-cleaner.sh userID
+```
 
 ## The error
 The error seems to be related to how the json response is handled, and I don't

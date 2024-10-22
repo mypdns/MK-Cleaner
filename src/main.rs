@@ -3,12 +3,15 @@ use misskey::ClientExt;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
+    // env_logger::init(); 
+
     let endpoint = std::env::var("MISSKEY_API_URL").expect("environment variable MISSKEY_API_URL");
     let token = std::env::var("MISSKEY_TOKEN").expect("environment variable MISSKEY_TOKEN");
     let client = misskey::HttpClient::builder(endpoint.as_str())
         .token(token)
         .build()
         .expect("Building misskey::HttpClient should succeed");
+
 
     let mut suspend_count_success = 0;
     let mut suspend_count_failures = 0;
@@ -17,7 +20,6 @@ async fn main() {
 
     for user_id in std::env::args().skip(1) {
         eprintln!("Doing {user_id}");
-
         let user: misskey::model::id::Id<_> = user_id.parse().expect("valid user_id");
         match client.suspend(user).await {
             Ok(()) => suspend_count_success += 1,
