@@ -39,7 +39,25 @@ server version `2024.10.0` while the last mention version on the project is
 First, you should clone this repository to make it easy to update.
 
 ```shell
-https://github.com/mypdns/MK-Cleaner.git mk-ckleaner
+git clone https://github.com/mypdns/MK-Cleaner.git mk-ckleaner && \
+    cd mk-ckleaner && cp mk-cleaner.sh.example mk-cleaner.sh
+```
+
+```shell
+# Open config file in default editor, else set default editor (*nix ONLY)
+if [ -n "$(which xdg-open)"  ]; then
+    xdg-open "mk-cleaner.sh"
+    elif [ -n "${VISUAL-${EDITOR-nano}}" ]; then
+        ${VISUAL-${EDITOR-nano}} "mk-cleaner.sh"
+    elif [ -n "$(which editor)" ]; then
+        editor "mk-cleaner.sh"
+    else
+        echo "Your System suck!!!"
+        echo "You should set a default editor for your system"
+        echo "I'll help you this time!!!"
+        select-editor || exit 1
+        editor "mk-cleaner.sh"
+fi
 ```
 
 > [!NOTE]  
