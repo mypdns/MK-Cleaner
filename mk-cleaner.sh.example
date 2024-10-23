@@ -10,3 +10,10 @@ export MISSKEY_TOKEN=""
 # export RUST_LOG=debug
 # export RUST_BACKTRACE=1
 ./target/debug/mk-cleaner "$userID"
+
+# Clean out Secret API token from the bash_history as it can be leaked
+# and compromise the security of your server.
+echo "Delete misskey token from bash_history"
+sed -i "/${MISSKEY_TOKEN}/d" "$HOME/.bash_history"
+echo "Delete userID from bash_history"
+sed -i "/$userID/d" "$HOME/.bash_history"

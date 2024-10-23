@@ -1,17 +1,25 @@
 use futures::stream::TryStreamExt;
+use log::{error, info};
 use misskey::ClientExt;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
-    env_logger::init(); 
+    env_logger::init();
+    info!("Application started");
 
     let endpoint = std::env::var("MISSKEY_API_URL").expect("environment variable MISSKEY_API_URL");
+    if endpoint.is_empty() {
+        error!("MISSKEY_API_URL is not set")
+    }
     let token = std::env::var("MISSKEY_TOKEN").expect("environment variable MISSKEY_TOKEN");
+    if token.is_empty() {
+        error!("MISSKEY_TOKEN is not set")
+    }
+
     let client = misskey::HttpClient::builder(endpoint.as_str())
         .token(token)
         .build()
         .expect("Building misskey::HttpClient should succeed");
-
 
     let mut suspend_count_success = 0;
     let mut suspend_count_failures = 0;

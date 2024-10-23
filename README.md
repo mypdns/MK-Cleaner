@@ -44,19 +44,27 @@ git clone https://github.com/mypdns/MK-Cleaner.git mk-ckleaner && \
 ```
 
 ```shell
-# Open config file in default editor, else set default editor (*nix ONLY)
-if [ -n "$(which xdg-open)"  ]; then
+# This script will open your config file with your default editor, else help
+# you set default editor (*nix ONLY)
+
+if [ -n "$(which xdg-open)" ]; then
     xdg-open "mk-cleaner.sh"
-    elif [ -n "${VISUAL-${EDITOR-nano}}" ]; then
+elif [ -n "${VISUAL-${EDITOR-nano}}" ]; then
+    ${VISUAL-${EDITOR-nano}} "mk-cleaner.sh"
+elif [ -n "$(which editor)" ]; then
+    editor "mk-cleaner.sh"
+else
+    echo "Your System suck!!!"
+    echo "You should set a default editor for your system"
+    echo "I'll help you this time!!!"
+    select-editor || exit 1
+
+    if [ -n "${VISUAL-${EDITOR-nano}}" ]; then
         ${VISUAL-${EDITOR-nano}} "mk-cleaner.sh"
+
     elif [ -n "$(which editor)" ]; then
         editor "mk-cleaner.sh"
-    else
-        echo "Your System suck!!!"
-        echo "You should set a default editor for your system"
-        echo "I'll help you this time!!!"
-        select-editor || exit 1
-        editor "mk-cleaner.sh"
+    fi
 fi
 ```
 
@@ -66,12 +74,12 @@ fi
 > We, should change the way we read in the environment variables from a config
 > file, and the rust program itself asks for the userID. 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Next you need to configure the `mk-cleaner.sh` by copying the
 > `mk-cleaner.sh.example` to `mk-cleaner.sh` and set the values of
 
-1. MISSKEY_API_URL, This is the full url to your API path, such as `https://example.org/api/`
-2. MISSKEY_TOKEN, This is your private API_key from your installation URI, such as `https://example.org/settings/api`
+1. `MISSKEY_API_URL`, This is the full url to your API path, such as `https://example.org/api/`
+2. `MISSKEY_TOKEN`, This is your private API_key from your installation URI, such as `https://example.org/settings/api`
 
 Now you should be able to run `mk-cleaner.sh` like 
 
